@@ -1,1 +1,1 @@
-# test-repository
+# study-repository
