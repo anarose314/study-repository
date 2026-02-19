@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "@types/node": "^25.3.0",
+    "typescript": "^5.9.3"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node main.js"
+  },
+  "dependencies": {
+    "tsx": "^4.21.0"
+  }
+}
