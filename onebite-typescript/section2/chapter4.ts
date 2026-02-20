@@ -1,4 +1,6 @@
-// 타입 별칭
+/**
+ * 타입 별칭
+ */
 type User = {
   id: number;
   name: string;
@@ -27,7 +29,9 @@ let user2: User = {
   location: "양주시",
 };
 
-// 인덱스 시그니처
+/**
+ * 인덱스 시그니처
+ */
 type CountryCodes = {
   [key: string]: string;
 };

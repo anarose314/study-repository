@@ -1,4 +1,6 @@
-// ------------------------------------------------ 배열
+/**
+ * 배열
+ */
 let numArr: number[] = [1, 2, 3];
 let strArr: string[] = ["hello", "im", "Anarose"];
 
@@ -14,7 +16,9 @@ let doubleArr: number[][] = [
   [4, 5],
 ];
 
-// ------------------------------------------------ 튜플
+/**
+ * 튜플
+ */
 // 길이와 타입이 고정된 배열
 let tup1: [number, number] = [1, 2];
 let tup2: [number, string, boolean] = [1, "2", true];
