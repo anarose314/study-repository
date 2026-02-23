@@ -1,11 +1,12 @@
+import Link from 'next/link';
 import styles from './Hedaer.module.css';
 
 export default function Header() {
   return (
     <>
       <header className={styles.header}>
-        <a href="/">홈</a>
-        <a href="/settings">설정</a>
+        <Link href="/">홈</Link>
+        <Link href="/settings">설정</Link>
       </header>
     </>
   );
