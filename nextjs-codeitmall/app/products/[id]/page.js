@@ -1,3 +1,11 @@
+import Button from '@/components/Button';
+import Productinfo from './components/Productinfo';
+
 export default function Product() {
-  return <h1>상품 상세 페이지</h1>;
+  return (
+    <div>
+      <Productinfo />
+      <Button>구매하기</Button>
+    </div>
+  );
 }
