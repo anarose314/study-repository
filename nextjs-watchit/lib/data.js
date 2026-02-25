@@ -1,7 +1,8 @@
 import { get } from '@/lib/fetch';
 
-export async function getMovies() {
-  const response = await get('/movies');
+export async function getMovies(q = '') {
+  const query = q ? `?q=${q}` : '';
+  const response = await get(`/movies${query}`);
   return response;
 }
 
