@@ -1,12 +1,16 @@
-import ProductList from './components/ProductList';
-import { getProducts } from '@/lib/data';
+import LoadMoreProductList from './components/LoadMoreProductList';
+import { getInitialProducts } from '@/lib/data';
 
 export default async function Home() {
-  const { results: products } = await getProducts();
+  const { results: products, next } = await getInitialProducts();
 
   return (
     <div>
-      <ProductList products={products} />
+      <LoadMoreProductList
+        key="all"
+        initialProducts={products}
+        initialNext={next}
+      />
     </div>
   );
 }
