@@ -6,7 +6,7 @@ export default function RootLayout({ children }) {
     <html lang="ko">
       <body>
         <Header />
-        <div className="p-4">{children}</div>
+        <div className="max-w-237.5 my-25 mx-auto">{children}</div>
       </body>
     </html>
   );

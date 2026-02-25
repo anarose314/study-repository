@@ -1,10 +1,12 @@
+import { getMovies } from '@/lib/data';
 import MovieList from './components/MovieList';
 
-export default function Home() {
+export default async function Home() {
+  const { results: movies } = await getMovies();
+
   return (
     <div>
-      <h1>홈페이지</h1>
-      <MovieList />
+      <MovieList movies={movies} />
     </div>
   );
 }
