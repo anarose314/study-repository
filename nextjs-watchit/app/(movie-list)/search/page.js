@@ -1,15 +1,18 @@
-import { getMovies } from '@/lib/data';
-import MovieList from '../components/MovieList';
+import { getInitialMovies } from '@/lib/data';
+import LoadMoreMovieList from '../components/LoadMoreMovieList';
 
 export default async function Search({ searchParams }) {
   const { q } = await searchParams;
-  const { results: movies } = await getMovies(q);
+  const { results: movies, next } = await getInitialMovies(q);
 
   return (
     <div>
-      <h1>검색 페이지</h1>
       <div>검색어: {q}</div>
-      <MovieList movies={movies} />
+      <LoadMoreMovieList
+        key={q || 'all'}
+        initialMovies={movies}
+        initialNext={next}
+      />
     </div>
   );
 }

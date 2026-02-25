@@ -1,12 +1,12 @@
-import { getMovies } from '@/lib/data';
-import MovieList from './components/MovieList';
+import { getInitialMovies } from '@/lib/data';
+import LoadMoreMovieList from './components/LoadMoreMovieList';
 
 export default async function Home() {
-  const { results: movies } = await getMovies();
+  const { results: movies, next } = await getInitialMovies();
 
   return (
     <div>
-      <MovieList movies={movies} />
+      <LoadMoreMovieList key="all" initialMovies={movies} initialNext={next} />
     </div>
   );
 }

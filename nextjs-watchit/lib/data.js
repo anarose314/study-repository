@@ -1,8 +1,8 @@
 import { get } from '@/lib/fetch';
 
-export async function getMovies(q = '') {
-  const query = q ? `?q=${q}` : '';
-  const response = await get(`/movies${query}`);
+export async function getInitialMovies(q = '') {
+  const query = q ? `&q=${q}` : '';
+  const response = await get(`/movies?offset=0&limit=9${query}`);
   return response;
 }
 
