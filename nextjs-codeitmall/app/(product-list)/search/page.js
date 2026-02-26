@@ -1,5 +1,6 @@
 import { getInitialProducts } from '@/lib/data';
 import LoadMoreProductList from '../components/LoadMoreProductList';
+import styles from './page.module.css';
 
 export default async function Search({ searchParams }) {
   const { q } = await searchParams;
@@ -7,7 +8,9 @@ export default async function Search({ searchParams }) {
 
   return (
     <div>
-      <div>검색어: {q}</div>
+      <h2 className={styles.title}>
+        <span className={styles.keyword}>{q}</span> 검색 결과
+      </h2>
       <LoadMoreProductList
         key={q || 'all'}
         initialProducts={products}

@@ -1,10 +1,10 @@
-import SearchFrom from './components/SearchFrom';
+import SearchForm from './components/SearchForm';
 import styles from './layout.module.css';
 
 export default function ProductListLayout({ children }) {
   return (
     <div>
-      <SearchFrom />
+      <SearchForm />
       <div className={styles.container}>{children}</div>
     </div>
   );

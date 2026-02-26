@@ -1,7 +1,7 @@
 import Header from '@/components/Header';
 import styles from './layout.module.css';
-import { ThemeProvider } from '@/contexts/ThemeContext';
 import './globals.css';
+import { ThemeProvider } from '@/contexts/ThemeContext';
 
 export default function RootLayout({ children }) {
   return (

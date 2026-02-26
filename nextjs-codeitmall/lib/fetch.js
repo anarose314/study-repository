@@ -28,7 +28,7 @@ export async function get(path, options = {}) {
   });
 }
 
-export async function post(path, options = {}) {
+export async function post(path, data, options = {}) {
   return request(path, {
     ...options,
     method: 'POST',
@@ -36,7 +36,7 @@ export async function post(path, options = {}) {
   });
 }
 
-export async function patch(path, options = {}) {
+export async function patch(path, data, options = {}) {
   return request(path, {
     ...options,
     method: 'PATCH',
